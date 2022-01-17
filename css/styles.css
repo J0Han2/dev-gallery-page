@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --Lg-Gray: hsl(0, 0%, 90%);
+    --Gray: hsl(0, 0%, 66%);
+    --DK-Gray: hsl(0, 0%, 74%);
+    --V-DK-Gray: hsl(160, 2%, 31%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 4rem 0 8rem;
+}
+
+.profile {
+    padding: 0 3vw;
+    text-align: center;
+}
+
+.profile__img {
+    border-radius: 1.6rem;
+    max-width: 10rem;
+    margin-bottom: .5rem;
+}
+
+.profile__name {
+    color: var(--V-DK-Gray);
+    font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+    line-height: clamp(1.7rem, 5vh, 2.9rem);
+}
+
+.profile__location {
+    color: var(--Gray);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    line-height: clamp(1.2rem, 3vh, 1.7rem);
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.stats__user {
+    background-color: var(--Lg-Gray);
+    border-radius: 1.2rem;
+    padding: 1rem 0;
+    width: 7.8rem;
+}
+
+.stats__number {
+    color: var(--V-DK-Gray);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: clamp(1.5rem, 3vh, 2.2rem);
+}
+
+.stats__text {
+    color: var(--DK-Gray);
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    line-height: clamp(1.5rem, 2vh, 1.7rem);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 4rem auto 0;
+    width: 95%;
+}
+
+.gallery__img {
+    place-self: stretch;
+    border-radius: 1.2rem;
+}
+
+.gallery__img--featured {
+    grid-column: span 2;
+}
+
+.gallery__img--row {
+    grid-row: span 2;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 5rem 14vw 12rem;
+    }
+
+    .profile {
+        padding: 0;
+    }
+
+    .profile__img {
+        max-width: 15rem;
+    }
+
+    .profile__name {
+        margin-bottom: 1rem;
+    }
+
+    .stats {
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .stats__user {
+        padding: 1.55rem 0;
+        width: 10rem;
+    }
+
+    .stats__number {
+        margin-bottom: .6rem;
+    }
+
+    .gallery {
+        gap: 2.5rem;
+        margin-top: 6rem;
+        width: 100%;
+    }
+}
